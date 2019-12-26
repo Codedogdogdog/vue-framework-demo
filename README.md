@@ -20,6 +20,12 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## 目录结构
+src
+- assets      本地静态资源
+- common      应用公共配置：例如导航信息，公共样式等
+- components  通用组件：存放业务通用组件或者内部通用组件，以_前缀做区分
+- utils       工具库
 
 ## 更新版本中发生的问题
 1、webpack-dev-server最新版本问题
