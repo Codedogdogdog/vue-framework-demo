@@ -33,4 +33,4 @@ src
 暂时解决办法：webpack-dev-server版本降级至3.5.1
 
 2、url-loader最新版本问题
-经由url-loader转换后，图片路径出现问题，输出：[object Module]，导致无法查看图片
+经由url-loader转换后，图片路径出现问题，输出：`[object Module]`，导致无法查看图片
