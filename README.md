@@ -1,6 +1,6 @@
-# fmc
+# Element
 
-> A Vue.js project
+> 存放Element相关的组件再封装，简化开发
 
 ## Build Setup
 
