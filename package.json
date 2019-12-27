@@ -18,7 +18,7 @@
   "lint-staged": {
     "linters": {
       "*.{js,vue,scss}": [
-        "prettier --print-width 120 --single-quote --trailing-comma all --jsx-bracket-same-line --write",
+        "prettier --print-width 120 --single-quote --trailing-comma all --jsx-bracket-same-line --no-semi --write",
         "stylelint \"*.scss .vue\" --fix",
         "git add"
       ]
