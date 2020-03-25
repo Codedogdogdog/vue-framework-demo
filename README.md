@@ -27,6 +27,9 @@ src
 - components  通用组件：存放业务通用组件或者内部通用组件，以_前缀做区分
 - utils       工具库
 
+## 项目构建
+项目拉下来后，需通过`git remote origin set-url [url]`来修改仓库地址
+
 ## 更新版本中发生的问题
 1、webpack-dev-server最新版本问题
 版本升级到最新版本会报 `Cannot assign to read only property 'exports' of object '#<Object>'` 错误
