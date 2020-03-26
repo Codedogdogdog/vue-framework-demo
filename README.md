@@ -30,6 +30,25 @@ src
 ## 项目构建
 项目拉下来后，需通过`git remote origin set-url [url]`来修改仓库地址
 
+## 项目优化
+### Tree shaking
+之前一直因为tree-shaking会导致`.vue`文件里的样式丢失，而不敢引入。
+现在找到解决办法
+
+在 modeule -> rule 里明确style区域块存在副作用即可
+```
+oneOf: [
+  {
+    resourceQuery: /\?vue/,
+    // 指定.vue文件的 style区域块 使用 tree shaking 时会有副作用
+    sideEffects: true,
+    use: loader
+  }, {
+    use: loader
+  }
+]
+```
+
 ## 更新版本中发生的问题
 1、webpack-dev-server最新版本问题 [fixed]
 版本升级到最新版本会报 `Cannot assign to read only property 'exports' of object '#<Object>'` 错误
