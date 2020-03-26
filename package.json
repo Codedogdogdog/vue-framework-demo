@@ -10,6 +10,7 @@
     "build": "node build/build.js",
     "create": "Engtools -d ./template"
   },
+  "sideEffects": false,
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
