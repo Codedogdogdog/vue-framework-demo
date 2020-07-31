@@ -56,3 +56,8 @@ oneOf: [
 
 2、url-loader最新版本问题 [fixed]
 经由url-loader转换后，图片路径出现问题，输出：`[object Module]`，导致无法查看图片
+
+## 待更新问题
+1、没引入polyfill导致使用async出错
+引入 @babel/polyfill ，并且在.babelrc文件配置 "useBuiltIns": "usage"
+
