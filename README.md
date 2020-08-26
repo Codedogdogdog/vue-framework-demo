@@ -61,3 +61,6 @@ oneOf: [
 1、没引入polyfill导致使用async出错
 引入 @babel/polyfill ，并且在.babelrc文件配置 "useBuiltIns": "usage"
 
+2、postcss-import 不支持 webpack alias导致 @import引入错误
+解决方案: https://github.com/postcss/postcss-import/issues/190#issuecomment-298078092
+
