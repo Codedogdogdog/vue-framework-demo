@@ -64,3 +64,5 @@ oneOf: [
 2、postcss-import 不支持 webpack alias导致 @import引入错误
 解决方案: https://github.com/postcss/postcss-import/issues/190#issuecomment-298078092
 
+3、postcss-px-to-viewport 使用了 postcss v7 的方法，该方法在postcss v8 不兼容导致错误
+将 postcss 降版本到 7.0.32 并且将 postcss-loader 升级到最新版(为了减少控制台提示)
