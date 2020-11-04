@@ -18,10 +18,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   margin-top: 60px;
-  color: #2c3e50;
+  color: $primary;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;

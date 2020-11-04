@@ -1,0 +1,48 @@
+// 配置全局css函数, 只能存放例如@function, @mixin等，因为其在不被使用的情况下
+// 不会被引入到代码中
+
+// 解决移动端常见1px问题
+@mixin border-1px($color) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &::before {
+      width: 200%;
+      height: 200%;
+      transform: scale(.5);
+    }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &::before {
+      width: 300%;
+      height: 300%;
+      transform: scale(.33);
+    }
+  }
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color;
+    transform-origin: left top;
+    content: '';
+  }
+}
+
+// 自适应背景图片倍率
+// 为什么不用background-image: image-set？ Firefox、IE浏览器不支持
+@mixin background-image($url, $type: '') {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    background-image: url($url+'@2x'+$type);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    background-image: url($url+'@3x'+$type);
+  }
+
+  background-image: url($url+$type);
+}
