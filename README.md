@@ -49,20 +49,6 @@ oneOf: [
 ]
 ```
 
-## 更新版本中发生的问题
-1、webpack-dev-server最新版本问题 [fixed]
-版本升级到最新版本会报 `Cannot assign to read only property 'exports' of object '#<Object>'` 错误
-暂时解决办法：webpack-dev-server版本降级至3.5.1
-
-2、url-loader最新版本问题 [fixed]
-经由url-loader转换后，图片路径出现问题，输出：`[object Module]`，导致无法查看图片
-
 ## 待更新问题
-1、没引入polyfill导致使用async出错
-引入 @babel/polyfill ，并且在.babelrc文件配置 "useBuiltIns": "usage"
-
-2、postcss-import 不支持 webpack alias导致 @import引入错误
-解决方案: https://github.com/postcss/postcss-import/issues/190#issuecomment-298078092
-
-3、postcss-px-to-viewport 使用了 postcss v7 的方法，该方法在postcss v8 不兼容导致错误
+- postcss-px-to-viewport 使用了 postcss v7 的方法，该方法在postcss v8 不兼容导致错误
 将 postcss 降版本到 7.0.32 并且将 postcss-loader 升级到最新版(为了减少控制台提示)

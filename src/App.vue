@@ -7,6 +7,14 @@
 <script>
 export default {
   name: 'App',
+  created () {
+    console.log(this.a())
+  },
+  methods: {
+    async a () {
+
+    }
+  }
 }
 </script>
 
