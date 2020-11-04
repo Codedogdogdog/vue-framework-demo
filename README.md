@@ -1,4 +1,4 @@
-# fmc
+# Vue framework demo
 
 > A Vue.js project
 
