@@ -64,7 +64,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }, {
       ignore: ['.*']
     })
-  ]
+  ],
+  target: 'web'
 })
 
 module.exports = new Promise((resolve, reject) => {
