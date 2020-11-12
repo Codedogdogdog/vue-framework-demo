@@ -17,6 +17,14 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
+      url: (url, resourcePath) => {
+        // Mimics v3 handling of absolute URLs.
+        if (url.startsWith('/')) {
+          return false
+        }
+
+        return true
+      },
       sourceMap: options.sourceMap,
       esModule: false
     }
